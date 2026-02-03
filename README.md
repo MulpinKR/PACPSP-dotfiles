@@ -1,7 +1,5 @@
 # PACPSP — Custom labwc Desktop Environment
 
-![PACPSP Desktop](assets/pacpsp-screenshot.png)
-
 hi its PACPSP - a brand new DE!, its uses labwc as compositor as for testing and DE is based usually on xcfe4
 
 made this in like 1-2 days, not really hard in creating DE
