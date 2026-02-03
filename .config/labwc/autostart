@@ -1,0 +1,30 @@
+#!/bin/sh
+# Автозапуск для PACPSP (labwc)
+
+# Обои (swww — лучший для Wayland)
+swww init &
+swww img ~/Pictures/nebula.jpg &   # замени на свой путь к обоям
+
+# Уведомления
+mako &
+
+# Панель задач (xfce4-panel)
+xfce4-panel &
+
+# Другие полезные вещи (если нужно)
+# nm-applet &               # для сети в трее
+# blueman-applet &          # bluetooth
+# xdg-desktop-portal-gtk &  # порталы для скринов/файлов
+
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+xfce4-power-manager &
+
+swaybg -i /home/mulpin/Pictures/nebula.jpg -m fill &   # -m fill — растянуть на весь экран без искажений
+
+swww init &
+swww img ~/Pictures/nebula.jpg --transition-type wipe --transition-fps 60 &
+
+# Запуск самого композитора (обязательно в конце!)
+exec labwc
+

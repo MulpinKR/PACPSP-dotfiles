@@ -1,0 +1,5 @@
+[user]
+indicatorColorFromTheme=true
+onlyDisplayVisible=false
+showWindowCount=true
+noWindowsListIfSingle=true

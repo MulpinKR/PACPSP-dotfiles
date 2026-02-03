@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu xmlns="http://openbox.org/"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://openbox.org/">
+
+  <!-- Главное меню (root-menu) при правом клике по десктопу -->
+  <menu id="root-menu" label="PACPSP Menu">
+
+    <!-- Подменю Программы -->
+    <menu id="apps-menu" label="Программы">
+      <item label="Терминал">
+        <action name="Execute"><command>foot</command></action>  <!-- или kitty, alacritty, gnome-terminal -->
+      </item>
+      <item label="Файловый менеджер">
+        <action name="Execute"><command>thunar</command></action>
+      </item>
+      <item label="Браузер">
+        <action name="Execute"><command>firefox</command></action>  <!-- или chromium, brave -->
+      </item>
+      <separator />
+      <item label="Текстовый редактор">
+        <action name="Execute"><command>code</command></action>  <!-- vscode, или nano в терминале -->
+      </item>
+    </menu>
+
+    <!-- Системные действия -->
+    <menu id="system-menu" label="Система">
+      <item label="Заблокировать экран">
+        <action name="Execute"><command>swaylock -f -c 000000</command></action>
+      </item>
+      <item label="Выход из сессии">
+        <action name="Exit" />
+      </item>
+      <separator />
+      <item label="Перезагрузка">
+        <action name="Execute"><command>systemctl reboot</command></action>
+      </item>
+      <item label="Выключение">
+        <action name="Execute"><command>systemctl poweroff</command></action>
+      </item>
+      <item label="Сон">
+        <action name="Execute"><command>systemctl suspend</command></action>
+      </item>
+    </menu>
+
+    <!-- Полезные утилиты -->
+    <item label="Reconfigure (перезагрузить конфиг)">
+      <action name="Reconfigure" />
+    </item>
+
+    <separator />
+
+    <!-- Выход полностью -->
+    <item label="Выход в консоль (Exit labwc)">
+      <action name="Exit" />
+    </item>
+
+  </menu>
+
+  <!-- Это меню для правого клика по заголовку окна (если хочешь отдельно кастомизировать) -->
+  <menu id="client-menu" label="">
+    <item label="Закрыть окно">
+      <action name="Close" />
+    </item>
+    <item label="Минимизировать">
+      <action name="Iconify" />
+    </item>
+    <item label="Развернуть">
+      <action name="Maximize" />
+    </item>
+  </menu>
+
+</openbox_menu>
